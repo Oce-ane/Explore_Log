@@ -1,4 +1,4 @@
-<h1>My Rails Application</h1>
+<h1>Explore Log</h1>
 
 <h3>Table of Contents</h3>
 
