@@ -75,10 +75,11 @@ Open your browser and go to **http://localhost:3000**.
 <h4>Adding Pins</h4>
 
 1. On the journey's show page, click on "Add Pin."
-2. Choose between adding text or photo inputs.
-3. For text, enter your text and click outside the input to save it.
-4. For photos, upload an image file from your device.
-5. Resize and reposition the elements as needed.
+2. Choose between one of our beautiful templates or a blank canvas.
+3. Choose between adding text or photo inputs.
+4. For text, enter your text and click outside the input to save it.
+5. For photos, upload an image file from your device.
+6. Resize and reposition the elements as needed.
 
 <h4>Undoing Actions</h4>
 
@@ -88,43 +89,43 @@ Open your browser and go to **http://localhost:3000**.
 
 <h4>BlankController</h4>
 
-- connect: Initializes the canvas and gesturable elements.
-- toggleSideBar: Toggles the sidebar visibility.
-- onChangeColor: Changes the background color of the canvas.
-- addTextInput: Adds a new text input to the canvas.
-- addPhotoInput: Adds a new photo input to the canvas.
-- handleTextChange: Handles changes to text inputs.
-- handlePhotoChange: Handles changes to photo inputs.
-- initializeInteract: Initializes draggable and resizable functionality for elements.
-- initializeGesturable: Initializes gesturable functionality for elements.
-- undoLastAction: Undoes the last action.
+- **connect:** Initializes the canvas and gesturable elements.
+- **toggleSideBar:** Toggles the sidebar visibility.
+- **onChangeColor:** Changes the background color of the canvas.
+- **addTextInput:** Adds a new text input to the canvas.
+- **addPhotoInput:** Adds a new photo input to the canvas.
+- **handleTextChange:** Handles changes to text inputs.
+- **handlePhotoChange:** Handles changes to photo inputs.
+- **initializeInteract:** Initializes draggable and resizable functionality for elements.
+- **initializeGesturable:** Initializes gesturable functionality for elements.
+- **undoLastAction:** Undoes the last action.
 
 <h4>JourneysController</h4>
 
-- index: Lists all journeys.
-- show: Displays a specific journey.
-- new: Shows the form for creating a new journey.
-- create: Creates a new journey.
-- edit: Shows the form for editing a journey.
-- update: Updates a specific journey.
-- destroy: Deletes a specific journey.
+- **index:** Lists all journeys.
+- **show:** Displays a specific journey.
+- **new:** Shows the form for creating a new journey.
+- **create:** Creates a new journey.
+- **edit:** Shows the form for editing a journey.
+- **update:** Updates a specific journey.
+- **destroy:** Deletes a specific journey.
   
 <h4>PinsController</h4>
 
-- create: Creates a new pin within a journey.
-- edit: Shows the form for editing a pin.
-- update: Updates a specific pin.
-- destroy: Deletes a specific pin.
+- **create:** Creates a new pin within a journey.
+- **edit:** Shows the form for editing a pin.
+- **update:** Updates a specific pin.
+- **destroy:** Deletes a specific pin.
 
 <h3>Customization</h3>
 
 To customize the application's appearance and functionality, you can modify the corresponding controllers, views, and stylesheets.
 
 <h4>Adding Custom Styles</h4>
-Add your custom styles to **app/assets/stylesheets/application.css** or create new stylesheets and include them in the application.
+Add your custom styles to <strong>'app/assets/stylesheets/application.css'</strong> or create new stylesheets and include them in the application.
 
 <h4>Modifying Views</h4>
-Edit the views located in **app/views** to change the HTML structure and content displayed to users.
+Edit the views located in <strong>'app/views'</strong> to change the HTML structure and content displayed to users.
 
 <h3>Contributing</h3>
 
