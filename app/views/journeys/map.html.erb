@@ -1,21 +1,23 @@
-<% if @markers %>
-  <div style="width: 100vw; height: 100vh;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-<% else %>
-  <div style="width: 100vw; height: 100vh;"
-    data-controller="map"
-    data-map-markers-value="<%= [].to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-    data-journey-location="<%= @journey_location.to_json %>">
-<% end %>
-    <%= link_to :back do  %>
-      <i class="fas fa-chevron-circle-left"></i>
-    <% end %>
-    <%= link_to new_journey_pin_path(@journey) do %>
-      <button class="small-btn-pin">
-        <i class="fa-solid fa-location-dot"></i>
-      </button>
-    <% end %>
+<div class="show">
+  <% if @markers %>
+    <div style="width: 390px; height: 844px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <% else %>
+    <div style="width: 390px; height: 844px;"
+      data-controller="map"
+      data-map-markers-value="<%= [].to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      data-journey-location="<%= @journey_location.to_json %>">
+  <% end %>
+      <%= link_to :back do  %>
+        <i class="fas fa-chevron-circle-left"></i>
+      <% end %>
+      <%= link_to new_journey_pin_path(@journey) do %>
+        <button class="small-btn-pin">
+          <i class="fa-solid fa-location-dot"></i>
+        </button>
+      <% end %>
+  </div>
 </div>

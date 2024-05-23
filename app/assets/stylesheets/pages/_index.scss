@@ -5,6 +5,11 @@ body{
   background-color: $white;
 }
 
+.journeys-body {
+  width: 390px;
+  height: 844px;
+}
+
 .container{
   display:flex;
   flex-direction: column;
@@ -60,7 +65,7 @@ body{
 
   h1{
     font-family: $headers-font;
-    letter-spacing: 1vw;
+    letter-spacing: 0.1rem;
     font-size: 48px;
     margin-left: 2px;
   }
@@ -81,7 +86,8 @@ body{
 
 @media screen and (max-width:1800px) {
   .journeys-body {
-    width: 370px;
+    width: 390px;
+    height: 844px;
 
   }
 }
