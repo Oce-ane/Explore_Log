@@ -1,8 +1,11 @@
 .card-christmas {
   font-size: 40px;
   font-family: $template-font;
+  width: 370px;
 }
 .christmas-bg {
+  // width: 390px;
+  // height: 844px;
   width: 100vw;
   height: 100vh;
   background-image: url("merrychristmas.jpeg");
@@ -10,6 +13,7 @@
   position: fixed;
   left: 0;
   bottom: 0;
+  // z-index: 1;
   button {
     background-color: #FFD952;
     border: none;

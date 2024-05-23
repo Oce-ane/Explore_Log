@@ -43,7 +43,7 @@
 .mapboxgl-canvas {
   width: 390px !important;
   height: 844px !important;
-
+  object-fit: cover !important;
 }
 
 .planepic {

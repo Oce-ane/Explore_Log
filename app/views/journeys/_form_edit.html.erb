@@ -1,32 +1,34 @@
-<div class="form-edit">
-  <%= simple_form_for(@journey) do |f| %>
-    <%= f.input :name, input_html: {autocomplete: 'off'} %>
-    <%= f.label :location %>
-    <%= f.input :location, as: :hidden,
-                input_html: { class: "journey_location",
-                      data: {location_autocomplete_target: "location"}},
-                wrapper_html: {data: {controller: "location-autocomplete",
-                                      location_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
-    <br>
-    <div class="form-dates">
-      <div class="start">
-        <%= f.input :start_date,
-                as: :string,
-                input_html: { data: { controller: "datepicker" } } %>
+<div class="show">
+  <div class="form-edit">
+    <%= simple_form_for(@journey) do |f| %>
+      <%= f.input :name, input_html: {autocomplete: 'off'} %>
+      <%= f.label :location %>
+      <%= f.input :location, as: :hidden,
+                  input_html: { class: "journey_location",
+                        data: {location_autocomplete_target: "location"}},
+                  wrapper_html: {data: {controller: "location-autocomplete",
+                                        location_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
+      <br>
+      <div class="form-dates">
+        <div class="start">
+          <%= f.input :start_date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+        </div>
+        <div class="end">
+          <%= f.input :end_date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+        </div>
       </div>
-      <div class="end">
-        <%= f.input :end_date,
-                as: :string,
-                input_html: { data: { controller: "datepicker" } } %>
-      </div>
-    </div>
-    <%= f.input :description %>
-    <%= f.label :cover_photo, class: "btn large mt-3", id:"camera" do %>
-      <i class="fa-solid fa-camera"></i>
-      <%= f.file_field :cover_photo, class: "hidden-input" %>
+      <%= f.input :description %>
+      <%= f.label :cover_photo, class: "btn large mt-3", id:"camera" do %>
+        <i class="fa-solid fa-camera"></i>
+        <%= f.file_field :cover_photo, class: "hidden-input" %>
+      <% end %>
+      <%= button_tag( class: "large", id: "submit-btn" ) do  %>
+        <i class="fa-solid fa-check"></i>
+      <% end %>
     <% end %>
-    <%= button_tag( class: "large", id: "submit-btn" ) do  %>
-      <i class="fa-solid fa-check"></i>
-    <% end %>
-  <% end %>
+  </div>
 </div>

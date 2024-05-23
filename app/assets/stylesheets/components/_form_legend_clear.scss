@@ -15,10 +15,7 @@ legend ~ div.form-check:first-of-type {
 }
 
 #submit-btn {
-  position: fixed;
-  bottom: 70px;
-  left: 47%;
-  transform: translateX(-50%);
+  margin-top: 42px;
 }
 .required{
   padding-top: 6px;
@@ -117,6 +114,8 @@ legend ~ div.form-check:first-of-type {
 
 
 .signup{
+  width: 390px;
+  height: 844px;
   margin: 42px;
 
   input{

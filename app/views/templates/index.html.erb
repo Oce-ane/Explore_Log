@@ -1,10 +1,12 @@
-<%= render "shared/header" %>
-<div class="container">
-  <% @templates.each do |template| %>
-  <div class="card-templates <%= "background-#{template.name.downcase}" %>">
-    <%= link_to "templates/#{template.name}" do %>
-        <%= template.name.upcase %>
-      <% end %>
-    </div>
-  <% end %>
+<div class="show">
+  <%= render "shared/header" %>
+  <div class="container">
+    <% @templates.each do |template| %>
+    <div class="card-templates <%= "background-#{template.name.downcase}" %>">
+      <%= link_to "templates/#{template.name}" do %>
+          <%= template.name.upcase %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>

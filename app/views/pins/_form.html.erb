@@ -1,35 +1,36 @@
-<div class="header">
-  <%= link_to journey_path(@journey) do %>
-    <%= image_tag "back.png", class: 'back-image', style: 'width: 22px; height: 22px;' %>
-  <% end %>
-  <%= link_to journeys_path, id: 'logo' do %>
-    <p class="logo">EXPLORELOG</p>
-  <% end %>
-</div>
-<br>
-<div class="container">
-  <div class="form-card">
-  <br>
-    <%= simple_form_for [@journey, @pin] do |f| %>
-      <%= f.label :location %>
-      <%= f.input :location, as: :hidden,
-                  input_html: {data: {location_autocomplete_target: "location"}},
-                  wrapper_html: {data: {controller: "location-autocomplete",
-                                        location_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
-    <br>
-      <div class="date">
-        <%= f.input :date,
-                as: :string,
-                input_html: { data: { controller: "datepicker" } } %>
-      </div>
-    <br>
-    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));">
-      <img src="/images/plane.webp" alt="" class="planepic">
-    </div>
-    <br>
-    <br>
-      <%= f.submit "✔", class: "large", id: "submit-btn" %>
+<div class="show">
+  <div class="header">
+    <%= link_to journey_path(@journey) do %>
+      <%= image_tag "back.png", class: 'back-image', style: 'width: 22px; height: 22px;' %>
+    <% end %>
+    <%= link_to journeys_path, id: 'logo' do %>
+      <p class="logo">EXPLORELOG</p>
     <% end %>
   </div>
+  <br>
+  <div class="container">
+    <div class="form-card">
+    <br>
+      <%= simple_form_for [@journey, @pin] do |f| %>
+        <%= f.label :location %>
+        <%= f.input :location, as: :hidden,
+                    input_html: {data: {location_autocomplete_target: "location"}},
+                    wrapper_html: {data: {controller: "location-autocomplete",
+                                          location_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}} %>
+      <br>
+        <div class="date">
+          <%= f.input :date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+        </div>
+      <br>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));">
+        <img src="/images/plane.webp" alt="" class="planepic">
+      </div>
+      <br>
+      <br>
+        <%= f.submit "✔", class: "large", id: "submit-btn" %>
+      <% end %>
+    </div>
+  </div>
 </div>
-
