@@ -1,11 +1,11 @@
 <div class="show">
   <% if @markers %>
-    <div style="width: 390px; height: 844px;"
+    <div style="width: 100vw; height: 100vh;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   <% else %>
-    <div style="width: 390px; height: 844px;"
+    <div style="width: 100vw; height: 100vh;"
       data-controller="map"
       data-map-markers-value="<%= [].to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
